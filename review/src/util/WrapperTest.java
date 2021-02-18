@@ -23,18 +23,22 @@ public class WrapperTest {
 
 		
 //		// 4.String->Date
-//
-//		Date result = DateUtil.toDate("20210210");
-//		System.out.println(result);
-//
-//		// 5.Date->String
-//
-//		String str = DateUtil.toStr(new Date());
-//		System.out.println(str);
-//
-////		// 6.format->format
-//		String str2 = DateUtil.toStr(new Date(), "G zZ yyyy/MM/dd E요일 a h시s분 1년 중 D일");
-//		System.out.println(str2);
+		Date results = DateUtil.toDate("20210210");
+		System.out.println(results);
+
+		// 5.Date->String
+		String str1 = DateUtil.toStr(new Date());
+		System.out.println(str1);
+		
+		// 6.format->format
+		String str2 = DateUtil.toStrFormat(new Date(), "G zZ yyyy/MM/dd E요일 a h시s분 1년 중 D일");
+		System.out.println(str2);
+		
+		// 날짜 계산
+		Date today = new Date();
+		Date meetDay = DateUtil.addDays(today, 100);
+		System.out.println(DateUtil.toStr(meetDay));
+		
 	}
 
 } // end of class
