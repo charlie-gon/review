@@ -4,6 +4,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 public class DateUtil {
 
@@ -52,17 +53,9 @@ public class DateUtil {
 	 * 날짜 계산
 	 * @throws ParseException 
 	 */
-	public static String addDay(String date, int cnt) throws ParseException {
-		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-		Calendar cal = Calendar.getInstance();
-		Date dt = dateFormat.parse(date);
-		cal.setTime(dt);
-		cal.add(Calendar.DATE, cnt);
-		return dateFormat.format(cal.getTime());
-	}
 	
 	public static Date addDays(Date date, int cnt) {
-		Date result = null;
+		Date result = new Date();
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 		try {
 			result = dateFormat.parse("2021-02-18");

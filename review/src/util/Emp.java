@@ -1,11 +1,15 @@
 package util;
 
+import lombok.Data;
+
+@Data
 public class Emp {
 	public int id;
 	public String name;
 	public String dept;
 
 	public Emp() {
+		
 	}
 
 	public Emp(int id, String name, String dept) {
